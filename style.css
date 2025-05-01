@@ -337,7 +337,7 @@ footer p{
     #header {
         background-image: url('image/home2.jpg');
         background-repeat: no-repeat;
-        background-size: 50% auto; /* Shrinks the image to 50% of the container width */
+        background-size: 90% auto; /* Shrinks the image to 50% of the container width */
         background-position: center;
     }
     }
