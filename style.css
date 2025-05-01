@@ -336,9 +336,7 @@ footer p{
 @media only screen and (max-width: 600px){
     #header {
         background-image: url('image/home2.jpg');
-        background-repeat: no-repeat;
-        background-size: 90% auto; /* Shrinks the image to 50% of the container width */
-        background-position: center;
+
     }
     }
 
