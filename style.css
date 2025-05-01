@@ -334,9 +334,12 @@ footer p{
     text-align: center;
 }
 @media only screen and (max-width: 600px){
-    #header{
+    #header {
         background-image: url('image/home2.jpg');
-
+        background-repeat: no-repeat;
+        background-size: 50% auto; /* Shrinks the image to 50% of the container width */
+        background-position: center;
+    }
     }
 
 
