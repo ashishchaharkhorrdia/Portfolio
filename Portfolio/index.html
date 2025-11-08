@@ -1,0 +1,644 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <title>Ashish Portfolio</title>
+    <link rel="icon" href="image/hd-logo.png" type="image/x-icon">
+    <style>
+        /* body {
+            font-family: sans-serif;
+            background-color: black;
+            color: white;
+        } */
+
+        #chat-icon {
+            position: fixed;
+            bottom: 50px;
+            right: 30px;
+            cursor: pointer;
+            background-color: #007bff;
+            color: white;
+            padding: 15px;
+            border-radius: 50%;
+            width: 60px;
+            height: 60px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 44px;
+            box-shadow: 0 0 10px #007bff, 0 0 20px #007bff;
+            transition: box-shadow 0.3s ease;
+        }
+        #chat-icon img{
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            z-index: 1;
+        }
+
+        #chat-icon:hover {
+            box-shadow: 0 0 15px #00a2ff, 0 0 45px #00a2ff;
+        }
+
+        #chat-window {
+            position: fixed;
+            bottom: 80px;
+            right: 20px;
+            width: 300px;
+            border: 2px solid #007bff; /* Glowing border color */
+            border-radius: 8px;
+            background-color: #1a1a1a;
+            display: none;
+            z-index: 1;
+            flex-direction: column;
+            max-height: 400px;
+            box-shadow: 0 0 10px #007bff, 0 0 20px #007bff, 0 4px 8px rgba(0, 0, 0, 0.5); /*Added a glow to the box shadow */
+            transition: border-color 0.3s ease, box-shadow 0.3s ease; /* smooth transition */
+        }
+
+        #chat-window:hover {
+            border-color: #00a2ff; /* Brighter glow on hover */
+            box-shadow: 0 0 15px #00a2ff, 0 0 25px #00a2ff, 0 4px 8px rgba(0, 0, 0, 0.5); /* increased glow on hover */
+        }
+
+        #chat-messages {
+            flex-grow: 1;
+            padding: 10px;
+            overflow-y: auto;
+        }
+
+        #chat-input-area {
+            display: flex;
+            padding: 10px;
+            border-top: 1px solid #333;
+        }
+
+        #chat-input {
+            flex-grow: 1;
+            padding: 8px;
+            border: 1px solid #555;
+            border-radius: 4px;
+            margin-right: 5px;
+            background-color: #222;
+            color: white;
+        }
+
+        #chat-send {
+            padding: 8px 12px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            box-shadow: 0 0 5px #007bff;
+        }
+
+        .user-message {
+            text-align: right;
+            margin-bottom: 5px;
+            background-color: #263238;
+            padding: 5px;
+            border-radius: 5px;
+        }
+
+        .chatbot-message {
+            text-align: left;
+            margin-bottom: 5px;
+            background-color: #37474f;
+            padding: 5px;
+            border-radius: 5px;
+        }
+        @media only screen and (max-width: 600px){
+            #chat-icon {
+            position: fixed;
+            bottom: 50px;
+            right: 30px;
+            z-index: 1;
+            }
+            #chat-icon img{
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            z-index: 1;
+            }
+
+
+
+        }
+
+    </style>
+</head>
+<body>
+     <div id="chat-icon"><img src="image/voice.gif" alt=""></div>    <!-- &#128172; -->
+    <div id="chat-window">
+        <div id="chat-messages"></div>
+        <div id="chat-input-area">
+            <input type="text" id="chat-input" placeholder="Type a message...">
+            <button id="chat-send">Send</button>
+        </div>
+    </div>
+  <div id="header">
+    <div class="container">
+        <nav>
+            <img class="logo" src="image/logo1.png" alt="logo">
+            <ul id="sidemenu">
+                <li><a href="#header">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#service">Services</a></li>
+                <li><a href="#port">Portfolio</a></li>
+                <li><a href="#contact">Contact</a></li>
+                
+            </ul>
+            
+        </nav>
+        <div class="header-text" >
+            <p>Coder</p>
+            <h1>Hii ,I'm <span>Ashish</span><br> from India</h1>
+        </div>
+    </div>
+  </div>  
+
+  <div id="about">
+    <div class="container">
+        <div class="row">
+            <div class="about-col-1">
+                <img src="image/bio.jpg" alt="About Pic" class="bio"></div>
+            <div class="about-col-2">
+                <h1 class="subtitle">My bio-data</h1>
+                <p class="about-text">
+    Hi, I'm <strong>Ashish</strong>, a tech-savvy professional 
+    with a strong command over computer operations 
+    and a solid background in web and software development. 
+    I am proficient in multiple programming languages including 
+    <strong>HTML</strong>, <strong>CSS</strong>, <strong>JavaScript</strong>, 
+    <strong>PHP</strong>, and <strong>Python</strong>.<br><br>
+
+    Throughout my career, I have successfully worked on 
+    <strong>15+ website projects</strong> and 
+    <strong>20+ Python-based projects</strong>, showcasing both my technical 
+    versatility and problem-solving abilities. My skill set also extends
+    to areas such as <strong>Machine Learning</strong> and 
+    <strong>Human Resources (HR)</strong> processes.
+</p>
+
+               
+                 
+            </div>
+        </div>
+    </div>
+  </div>
+
+<!-- service -->
+ <div id="service">
+    <div class="conatiner">
+        <h1 class="subtitle">Services</h1> 
+        <div class="service-list">
+            <div>
+                <i class="fas fa-code"></i>
+                <h2>Web Devlopment</h2>
+                <p>“Web development is the process of building and maintaining websites and web applications. It encompasses everything from designing the user interface to programming the underlying functionality, and ensuring the website performs well and is user-friendly. Web development involves various stages, including front-end development, back-end development, and full-stack development.”</p>
+                <a href="">Learn More</a>
+            </div>
+            <div>
+                <i class="fas fa-code-alt"></i>
+                <h2>Cyber Security</h2>
+                <p>“What is Cybersecurity? Cybersecurity refers to the measures taken to protect computers, networks, programs, and data from unauthorized access, damage, or theft. It encompasses a variety of practices and technologies designed to defend against cyber threats, which can include malware, ransomware, phishing attacks, and more. ”</p>
+                <a href="">Learn More</a>
+            </div>
+            <div>
+                <i class="fas fa-app-store"></i>
+                <h2>Computer Knowledge</h2>
+                <p>“Computer knowledge encompasses understanding how computers work and effectively utilizing them. This includes basic skills like using a mouse and keyboard, navigating the operating system, and understanding common software applications. It also involves knowledge of computer hardware and software, as well as the ability to troubleshoot basic issues” </p>
+                <a href="">Learn More</a>
+            </div>
+        </div>
+    </div>
+ </div> 
+
+ <!--resuma-->
+ <section class="section-resume section " >
+      <div class="container grid grid-two-col">
+        <!-- resume left side  -->
+        <div class="resume-img">
+          <img src="image/author.jpg" alt="my resume pic" 
+            data-src="image/author.jpg  "
+            loading="lazy"
+            class="lazy-img"
+          />
+        </div>
+
+        <!-- resume right side  -->
+        <div class="resume-data">
+          <h2 class="common-heading">resume</h2>
+          <p class="resume-para">my work experience</p>
+
+          
+          <!-- 2nd work experience  -->
+          <div class="resume-data-subsection">
+            <div class="resume-data-left">
+              <h3>Front End Developer</h3>
+              <div class="grid grid-two-col">
+                <p>
+                  <ion-icon name="business-outline"></ion-icon> Self
+                </p>
+                <p>
+                  <ion-icon name="location-outline"></ion-icon> Khorra,Haryana
+                </p>
+              </div>
+            </div>
+
+            <div class="resume-data-right">
+              <p class="resume-data-button">fulltime</p>
+              <p>
+                <ion-icon name="calendar-outline"></ion-icon> November 2021 -
+                Present
+              </p>
+            </div>
+          </div>
+
+          <!-- 3rd work experience  -->
+          <div class="resume-data-subsection">
+            <div class="resume-data-left">
+              <h3>Python Developer</h3>
+              <div class="grid grid-two-col">
+                <p>
+                  <ion-icon name="business-outline"></ion-icon> Self
+                </p>
+                <p>
+                  <ion-icon name="location-outline"></ion-icon> Khorra,Haryana
+                </p>
+              </div>
+            </div>
+
+            <div class="resume-data-right">
+              <p class="resume-data-button">fulltime</p>
+              <p>
+                <ion-icon name="calendar-outline"></ion-icon>June 2022 -
+                Present
+              </p>
+            </div>
+          </div>
+
+          <!-- 4th work experience  -->
+          <div class="resume-data-subsection">
+            <div class="resume-data-left">
+              <h3>Team Leader</h3>
+              <div class="grid grid-two-col">
+                <p>
+                  <ion-icon name="business-outline"></ion-icon>CBS Sr. Sec. School
+                </p>
+                <p>
+                  <ion-icon name="location-outline"></ion-icon> Ch(Dadri), Inc.
+                </p>
+              </div>
+            </div>
+
+            <div class="resume-data-right">
+              <p class="resume-data-button">fulltime</p>
+              <p>
+                <ion-icon name="calendar-outline"></ion-icon>Maech 2022 -
+                Present
+              </p>
+            </div>
+          </div>
+       
+          <!-- Education section  -->
+          <div class="resume-data-bottom-subsection"> 
+            <p class="resume-para">Education</p> 
+
+
+                   <!-- ist college  -->
+            <div class="resume-data-subsection ">
+              <div class="resume-data-left">
+                <h3>Secondary School</h3>
+                <div class="grid grid-two-col">
+                  <p>
+                    <ion-icon name="business-outline"></ion-icon> VD Sr. Sec. School, Inc.
+                  </p>
+                  <p>
+                    <ion-icon name="location-outline"></ion-icon> Jhajjar, HR
+                  </p>
+                </div>
+              </div>
+
+              <div class="resume-data-right">
+                <p class="resume-data-button"> Secondary End </p>
+                <p>
+                  <ion-icon name="calendar-outline"></ion-icon>  <span>MAr 2025 </span
+                  > 
+                </p>
+              </div>
+            </div>
+         
+
+
+             <!-- 2nd college  -->
+            <div class="resume-data-subsection ">
+              <div class="resume-data-left">
+                <h3>Bachelor in Computer Science</h3>
+                <div class="grid grid-two-col">
+                  <p>
+                    <ion-icon name="business-outline"></ion-icon> CGC, Inc.
+                  </p>
+                  <p>
+                    <ion-icon name="location-outline"></ion-icon> Mohali, PB
+                  </p>
+                </div>
+              </div>
+
+              <div class="resume-data-right">
+                <p class="resume-data-button"> Bachelor  Start </p>
+                <p>
+                  <ion-icon name="calendar-outline"></ion-icon>  <span>Aug 2025 - 2029 </span
+                  > 
+                </p>
+              </div>
+            </div>
+            <!-- end  -->
+             <a href="cv/Ashish.docx" class="btn btn1">Download Cv</a>
+          </div>
+        </div>
+      </div>
+      
+    </section>
+
+
+    <section class="cnj">
+      <span class="right">
+      <h2 class="cnjh">CyberNinjas</h2>
+      <hr>
+      <p class="cyberninjas-text">
+  As the leader of <span>Team CyberNinjas</span>, I work with a dedicated team focused on 
+  <strong>web development</strong>, <strong>freelancing services</strong>, and 
+  <strong>technology education</strong>. We aim to deliver high-quality digital solutions 
+  while helping others develop their technical skills and career potential. Our team combines 
+  <strong>innovation</strong>, <strong>professionalism</strong>, and a passion for 
+  <strong>continuous learning</strong> to make technology more approachable and impactful for everyone.
+</p>
+  </span> 
+    </section>
+
+
+ <!-- portfolio -->
+ <div id="port">
+    <div class="container">
+        <h1 class="subtitle">My Projects</h1>
+        <div class="work-list">
+            <div class="work">
+                <img src="image/portfoilo1.png" alt="img1">
+                <div class="layer">
+                    <h3>Portfolio Website</h3>
+                    <p>Using HTML,Java Script and CSS.
+                        It is a portfolio website. To show your work
+                        and skills.
+                    </p>
+                    <a href="#" class="fas fa-external-link-alt"></a>
+                </div>
+            </div>
+            <div class="work">
+                <img src="image/web.png" alt="img2">
+                <div class="layer">
+                    <h3>Website Sample</h3>
+                    <p>USing HTML,Java Script and CSS.
+                        Different section like cource,text,
+                        Scoure,Link for windows apps for coding.
+                        It's a very usefull web 
+                    </p>
+                    <a href="#" class="fas fa-external-link-alt"></a>
+                </div>
+            </div>
+            <div class="work">
+                <img src="image/portfolio.png" alt="img3">
+                <div class="layer">
+                    <h3> Portfolio Website </h3>
+                    <p>Using HTML,Java Script and CSS.
+                        It is a portfolio website.
+                    </p>
+                    <a href="#" class="fas fa-external-link-alt"></a>
+                </div>
+            </div>
+        </div>
+        <a href="see.html" class="btn">See More</a>
+    </div>
+ </div>
+
+<div id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="contact-left">
+                <h1 class="subtitle">Contact Me</h1>
+                <a href="mailto:your.achaharkhorrdia.com">
+                <p>Hello Ashish Chahar@gmail.com</p></a>
+                <p>🛜 🌐 🖥️ 🔗</p>
+                <a href="cv/Ashish.docx" class="btn btn1">Download Cv</a>
+            </div>
+            <div class="contact-right"></div>
+            <form name="submit-to-google-sheet" action="submit-to-google-sheet">
+                <input type="text" name="Name" placeholder="Your Name" required>
+                <input type="Email" name="Email" placeholder="Your Email" required >
+                <textarea name="Message" rows="6" placeholder="Your Message" required></textarea>
+                <button type="submit" class="btn btn2 ">Submit</button></form>
+               
+        </div>
+    </div>
+    <span id="msg"></span>
+
+<footer>
+    <p>&copy; 2024 Responsive Website</p>
+    
+        <div class="footer-content">
+            <!-- Logo -->
+            <img src="image/hd-logo.png" alt="Your Logo" class="footer-logo">
+
+            <p>© 2024 [Ashish] | All Rights Reserved</p>
+            <p>Built with ❤️ using HTML, CSS, and JavaScript</p>
+            <div class="social-links">
+                <a href="https://github.com/ashishchaharkhorrdia">GitHub</a>
+                <a href="https://linkedin.com/in/ashish-chahar-b16ba430b">LinkedIn</a>
+                <a href="mailto:your.achaharkhorrdia.com">Email</a>
+                <a href="/privacy-policy">Privacy Policy</a>
+            </div>
+            <p class="footer-note">This website was created to showcase my projects, skills, and experiences as a developer.</p>
+        </div>
+    
+</footer>
+
+
+
+
+
+
+
+
+
+
+<script>
+    // ... (JavaScript code remains the same) ...
+    const chatIcon = document.getElementById('chat-icon');
+    const chatWindow = document.getElementById('chat-window');
+    const chatMessages = document.getElementById('chat-messages');
+    const chatInput = document.getElementById('chat-input');
+    const chatSend = document.getElementById('chat-send');
+
+    chatIcon.addEventListener('click', () => {
+        chatWindow.style.display = chatWindow.style.display === 'flex' ? 'none' : 'flex';
+    });
+
+    const responses = {
+"hello": ["Hello! Welcome to Chahar's portfolio. How can I assist you today?", "Hi! I'm here to help you learn about my work. Please take your time.", "Welcome! Let's talk . I'll be patient."],
+"name": ["I'm Chahar's portfolio assistant. I can help you learn about my projects and skills."],
+"about": ["I'm here to answer your questions about Chahar's work. Please feel free to ask anything."],
+"default": ["I'm still learning. Could you please try saying that again in a different way?", "I'm not sure I understand. Can you give me more details?", "Take your time. I'm here to listen."],
+"goodbye": ["Goodbye! I enjoyed talking with you. Come back anytime.", "Have a good day! I'm here if you need me.", "See you later! Don't hesitate to reach out again."],
+"projects": ["Chahar has worked on various projects, including [Project 1], [Project 2], and [Project 3]. Would you like to know more about a specific project?", "You can find information about my projects in the 'Projects' section of this website."],
+"skills": ["Chahar's skills include [Skill 1], [Skill 2], and [Skill 3]. Is there a specific skill you're interested in?", "My skillset includes a variety of technologies. Please specify what you want to know."],
+"contact": ["You can contact Chahar via email at [your_email@example.com] or through the contact form on this website.", "Feel free to reach out using the contact information provided on the 'Contact' page."],
+"resume": ["You can download Chahar's resume from the 'Resume' section of this website.", "A downloadable version of my resume is available on this site."],
+"project1_details": ["Project 1 details: [Insert details here]."],
+"project2_details": ["Project 2 details: [Insert details here]."],
+"project3_details": ["Project 3 details: [Insert details here]."],
+"skill1_details": ["Skill 1 details: [Insert details here]."],
+"skill2_details": ["Skill 2 details: [Insert details here]."],
+"skill3_details": ["Skill 3 details: [Insert details here]."],
+"yes": ["Okay!", "Got it.", "Understood."],
+"no": ["Okay, no problem.", "Alright.", "Understood."],
+"repeat": ["Sure, I can repeat that. What would you like me to repeat?", "Of course, let me say that again."],
+"slow_down": ["Okay, I will speak more slowly.", "I will slow down my pace.", "I will try to speak slower."],
+"explain_again": ["Let me try explaining it in a different way.", "I'll give you another explanation.", "I'll rephrase that for you."],
+"clear_instructions": ["Please tell me what you need, and I will do my best to provide clear instructions.", "I'm ready for your instructions. Take your time."],
+"thank_you": ["You're welcome!", "My pleasure.", "I'm glad I could help."],
+};
+
+function getResponse(userText) {
+userText = userText.toLowerCase();
+
+if (userText.includes("hello") || userText.includes("hi") || userText.includes("hey")) {
+    return responses["hello"][Math.floor(Math.random() * responses["hello"].length)];
+} else if (userText.includes("name")) {
+    return responses["name"][0];
+} else if (userText.includes("about")) {
+    return responses["about"][0];
+} else if (userText.includes("project")) {
+    if(userText.includes("1")){
+        return responses["project1_details"][0];
+    } else if (userText.includes("2")){
+        return responses["project2_details"][0];
+    } else if (userText.includes("3")){
+        return responses["project3_details"][0];
+    } else {
+        return responses["projects"][Math.floor(Math.random() * responses["projects"].length)];
+    }
+} else if (userText.includes("skill")) {
+    if(userText.includes("1")){
+        return responses["skill1_details"][0];
+    } else if (userText.includes("2")){
+        return responses["skill2_details"][0];
+    } else if (userText.includes("3")){
+        return responses["skill3_details"][0];
+    } else {
+        return responses["skills"][Math.floor(Math.random() * responses["skills"].length)];
+    }
+} else if (userText.includes("contact")) {
+    return responses["contact"][Math.floor(Math.random() * responses["contact"].length)];
+} else if (userText.includes("resume")) {
+    return responses["resume"][Math.floor(Math.random() * responses["resume"].length)];
+} else if (userText.includes("bye") || userText.includes("goodbye")) {
+    return responses["goodbye"][Math.floor(Math.random() * responses["goodbye"].length)];
+} else if (userText.includes("yes") || userText.includes("okay") || userText.includes("ok")) {
+    return responses["yes"][Math.floor(Math.random() * responses["yes"].length)];
+} else if (userText.includes("no")) {
+    return responses["no"][Math.floor(Math.random() * responses["no"].length)];
+} else if (userText.includes("repeat")) {
+    return responses["repeat"][Math.floor(Math.random() * responses["repeat"].length)];
+} else if (userText.includes("slow down")) {
+    return responses["slow_down"][Math.floor(Math.random() * responses["slow_down"].length)];
+} else if (userText.includes("explain again")) {
+    return responses["explain_again"][Math.floor(Math.random() * responses["explain_again"].length)];
+} else if (userText.includes("clear instructions")) {
+    return responses["clear_instructions"][0];
+} else if (userText.includes("thank you")) {
+    return responses["thank_you"][Math.floor(Math.random() * responses["thank_you"].length)];
+} else {
+    return responses["default"][Math.floor(Math.random() * responses["default"].length)];
+}
+}
+
+
+    chatSend.addEventListener('click', () => {
+        const userText = chatInput.value;
+        if (userText.trim() !== '') {
+            displayMessage(userText, 'user');
+            const botResponse = getResponse(userText);
+            setTimeout(() => displayMessage(botResponse, 'chatbot'), 500);
+            chatInput.value = '';
+        }
+    });
+
+    chatInput.addEventListener("keyup", function(event) {
+        if (event.keyCode === 13) {
+            event.preventDefault();
+            chatSend.click();
+        }
+    });
+
+    function displayMessage(message, sender) {
+        const messageDiv = document.createElement('div');
+        messageDiv.textContent = message;
+        messageDiv.classList.add(`${sender}-message`);
+        chatMessages.appendChild(messageDiv);
+        chatMessages.scrollTop = chatMessages.scrollHeight;
+    }
+
+</script>
+
+  <script>
+    var tablinks=document.getElementsByClassName("tab-links");
+    var tabcontents=document.getElementsByClassName("tab-contents");
+    
+    function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link");
+        }
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+    }
+
+
+  </script>
+  <script>
+    var sidemenu =document.getElementById("sidemenu");
+
+    function openmenu(){
+        sidemenu.style.right="0";
+    } 
+    function closemenu(){
+        sidemenu.style.right="-200";
+    }
+
+
+  </script>
+  <script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbxKhzSDgzF3ZAsPTf0GoinhQtOZfwkOaPPFGdh_axBTLmjsNzIVoteFU14wppkDfiVy/exec'
+    const form = document.forms['submit-to-google-sheet']
+    const msg = document.getElementById("msg");
+  
+    form.addEventListener('submit', e => {
+      e.preventDefault()
+      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+        .then(response => {
+            msg.innerHTML = "Submited"
+            setTimeout(function(){
+                msg.innerHTML = ""
+            },5000)
+            form.reset()
+        })
+        .catch(error => console.error('Error!', error.message))
+    })
+  </script>
+</body>
+</html>
